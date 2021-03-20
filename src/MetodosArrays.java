@@ -1,4 +1,6 @@
 //import jdk.internal.misc.FileSystemOption;
+import java.util.Random;
+import java.util.Scanner;
 
 public class MetodosArrays {
 
@@ -170,9 +172,43 @@ public class MetodosArrays {
 	}
 	
 	//Exe2
+	public static void matrizDeAleatoria() {
+		Scanner entrada = new Scanner(System.in);
+		Random gerador = new Random();
+		int qtdLinhas;
+		int qtdColunas;
+		
+		System.out.println("Digite a quatidade de linhas do Array Bidimensional: ");
+		qtdLinhas = entrada.nextInt();
+		
+		System.out.println("Digite a quatidade de colunas do Array Bidimensional");
+		qtdColunas = entrada.nextInt();
+		
+		int[][] arrayBidi = new int[qtdLinhas][qtdColunas];
+		
+		for(int linhas =0; linhas < arrayBidi.length; linhas++) {
+			for(int colunas =0; colunas < arrayBidi[linhas].length; colunas++) {
+				arrayBidi[linhas][colunas] = gerador.nextInt(101);
+			}
+		}
+		for(int linha=0; linha < arrayBidi.length; linha++) {
+			for(int coluna =0; coluna < arrayBidi[linha].length; coluna++) {
+				System.out.println(arrayBidi[linha][coluna]);
+			}
+		}
+	}
 	
-	
-	
+	public static double dividir(int a, int b) {
+		try {
+			return a /b;
+		} catch(java.lang.ArithmeticException e) {
+			System.out.println("ERRO!!");
+			e.printStackTrace();//para mostrar o erro mesmo com o try
+		}finally {
+			System.out.println("Sempre é executado o finally");
+		}
+		return 0.0;
+	}
 	
 	
 	

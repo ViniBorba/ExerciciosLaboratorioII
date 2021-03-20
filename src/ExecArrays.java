@@ -45,6 +45,7 @@ public class ExecArrays {
 		arrayChar[3] = '.';
 		arrayChar[4] = '.';
 		
+		
 		//Exe1
 		//MetodosArrays.pressContrario(arrayDeInt);
 		
@@ -81,6 +82,7 @@ public class ExecArrays {
 		//MetodosArrays.arrayBidimensionalMaior();
 		
 		//Exe3
+		/*
 		int[][] arrayBidim2;
 		arrayBidim2 = MetodosArrays.arrayBidimensional1ao5();
 		for(int i =0; i < arrayBidim2.length; i++) {
@@ -90,10 +92,15 @@ public class ExecArrays {
 			}
 			System.out.println();
 		}
+		*/
 		
 		//Exe
-		
+		//MetodosArrays.matrizDeAleatoria();
 
+		//System.out.println();
+		System.out.println(MetodosArrays.dividir(7, 0));
+		//MetodosArrays.dividir(7, 3);
+		
 	}
 
 }
