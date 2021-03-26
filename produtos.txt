@@ -1,0 +1,22 @@
+Produto * Descricao * Preco * Tipo * Informacao extra
+Cafe * Cafe descafeinado * 2.00 * Alimento * 10/12/2015
+Bolacha * Integral * 5.53 * Alimento * 2/4/2010
+Camiseta * Manga curta * 17.90 * Vestuario * 10
+Fogao * 4 bocas * 890.00 * Eletrodomestico * 125.00
+Microondas * Preto, 110/220V * 490.98 * Eletrodomestico * 75
+Arroz * Parboilizado * 4.90 * Alimento * 20/12/2037
+Margarina * 100% gordura * 2.65 * Alimento * 15/4/2005
+Requeijao * Light * 4.37 * Alimento * 29/1/1998
+Maizena * Otima para bolos * 2.56 * Alimento * 23/7/2017
+Farinha * Tipo 2 * 6.89 * Alimento * 25/9/2019
+Fondue * Sabor Queijo * 19.90 * Alimento * 26/3/2009
+Leite * Zero Lactose * 3.85 * Alimento * 19/10/2000
+Calca * Jeans * 69.90 * Vestuario * 5
+Bermuda * 100% algodao * 29.90 * Vestuario * 16
+Casaco * Canguru * 78.64 * Vestuario * 8
+Moleton * 100% algodao * 27.50 * Vestuario * 36
+Gravata * Microfibra * 70.30 * Vestuario * 78
+Camiseta * Manga longa * 45.60 * Vestuario * 4
+Forno * A gas * 758.00 * Eletrodomestico * 127.90
+Torradeira * 220V * 360.10 * Eletrodomestico * 154.65
+Cafeteira * Nespresso * 399.90 * Eletrodomestico * 98.65
