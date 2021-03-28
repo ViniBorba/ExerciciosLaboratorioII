@@ -1,4 +1,3 @@
-Produto * Descricao * Preco * Tipo * Informacao extra
 Cafe * Cafe descafeinado * 2.00 * Alimento * 10/12/2015
 Bolacha * Integral * 5.53 * Alimento * 2/4/2010
 Camiseta * Manga curta * 17.90 * Vestuario * 10
