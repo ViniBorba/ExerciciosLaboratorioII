@@ -25,6 +25,7 @@ public class Estoque {
 			BufferedReader in = new BufferedReader(fr);//guardar o arquivo no buffer de memoria
 			
 			String line = in.readLine();// linha que rece uma linha do arquivo
+			//String arquivo = in.toString();// trnasofmr ao texto todo em String
 			//in.readLine();//pra pular a primeira linha
 			while(line != null) {
 				//int aux = 0;
@@ -51,7 +52,7 @@ public class Estoque {
 		for(int i =0; i < umProduto.length; i++) {
 			umProduto[i] = umProduto[i].trim();//tirar os espacos em branco
 		}
-
+		
 		//tentar ver se o elemento 4 do array e um int
 		try {
 				Vestuario novaPeca = new Vestuario(umProduto[0], umProduto[1], Double.valueOf(umProduto[2]).doubleValue(), umProduto[3], Integer.valueOf(umProduto[4]).intValue());
