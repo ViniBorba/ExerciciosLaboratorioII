@@ -14,4 +14,11 @@ public abstract class Produto {
 		this.tipo = tipo;
 	}
 
+	public double getPreco() {
+		return this.preco;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
 }

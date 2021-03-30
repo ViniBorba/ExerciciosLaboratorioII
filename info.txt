@@ -1,0 +1,18 @@
+Nome do vestuario: Camiseta
+Nome do vestuario: Calca
+Nome do vestuario: Bermuda
+Nome do vestuario: Casaco
+Nome do vestuario: Moleton
+Nome do vestuario: Gravata
+Nome do vestuario: Camiseta
+Vestuario em Estoque: 7
+
+------------------------
+
+O alimento mais caro é o: Fondue
+Seu valor é: 19.9
+
+------------------------
+
+O Eletrodomestico mais barato é o : 
+Seu valor é: 7

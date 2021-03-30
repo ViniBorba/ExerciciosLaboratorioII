@@ -8,4 +8,8 @@ public class Vestuario extends Produto {
 		super(nome, descreve, preco, tipo);//atributos de todos os produtos 
 		this.qtdEmEstoque = quantiaEmEstoque;
 	}
+	
+	public String getNome() {
+		return super.getNome();
+	}
 }

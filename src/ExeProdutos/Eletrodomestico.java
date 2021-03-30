@@ -8,4 +8,11 @@ public class Eletrodomestico extends Produto {
 		super(nome, descreve, preco, tipo);//atributos comuns
 		this.adicionalIPI = valorIPI;
 	}
+	
+	public double getPreco() {
+		return super.getPreco();
+	}
+	public String getNome() {
+		return super.getNome();
+	}
 }
