@@ -9,6 +9,7 @@ public class RecursaoPrincipal {
 		for(int i = 0; i < arrayDeInt.length; i++ ) {
 			arrayDeInt[i] = i + 1;
 		}
+		arrayDeInt[3] = -2;
 		//RecursaoPrincipal.imprimeArrayAoContrario(arrayDeInt, arrayDeInt.length - 1);
 		
 		//Exe 2
@@ -24,6 +25,10 @@ public class RecursaoPrincipal {
 		//RecursaoPrincipal.somaBidimensional(arrayBidiDouble);
 		
 		//Exe 3
+		System.out.println(RecursaoPrincipal.encontraPosicaoMenorValor(arrayDeInt));
+		
+		
+		
 		
 
 	}
@@ -54,8 +59,24 @@ public class RecursaoPrincipal {
 	
 	//Exe 3 rie  um  método  chamado  encontraPosicaoMenorValor.
 	//encontrar  a  posição  do  menor  valor  de  um  array  de  inteiros  recebido  por parâmetro
+	public static int encontraPosicaoMenorValor(int[] arrayInt) throws IllegalArgumentException {
+		if(arrayInt == null) {
+			throw new IllegalArgumentException();
+		}
+		return encontraPosicaoMenorValor(arrayInt, 1, 0); 
+	}
+	private static int encontraPosicaoMenorValor(int[] array, int indice, int menorValor) {
+		if(indice >= array.length) {//verefica que ainda tem indice pra percorrer
+			return menorValor;//se acabou o array retorna o menor valor
+		}
+		if(array[indice] < array[menorValor]) {
+			menorValor = indice;//se existier um valor menor, armaxena o indice desse valor
+		}
+		return encontraPosicaoMenorValor(array, indice +1, menorValor);//chama o metodo até entrar no primeiro if
+	}
 	
 	
+
 	
 	
 	
