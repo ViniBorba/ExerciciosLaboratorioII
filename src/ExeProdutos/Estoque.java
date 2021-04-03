@@ -30,7 +30,7 @@ public class Estoque {
 			//in.read();
 			FileReader fr = new FileReader(nomeDoArquivo);//ler o arquivo
 			BufferedReader in = new BufferedReader(fr);//guardar o arquivo no buffer de memoria
-			
+			//
 			String line = in.readLine();// linha que rece uma linha do arquivo
 			
 			//String arquivo = in.toString();// trnasofmr ao texto todo em String
