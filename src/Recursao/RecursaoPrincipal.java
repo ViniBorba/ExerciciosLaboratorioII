@@ -27,8 +27,21 @@ public class RecursaoPrincipal {
 		//Exe 3
 		System.out.println(RecursaoPrincipal.encontraPosicaoMenorValor(arrayDeInt));
 		
-		
-		
+		//Exe4
+		try {
+		int[][] arrayQuadrado = new int[4][6];
+		RecursaoPrincipal.printPrimaryDiagonal(arrayQuadrado);
+		for(int i =0; i < arrayQuadrado.length; i++) {
+			System.out.println();
+			for(int j =0; j < arrayQuadrado[i].length; j++) {
+				System.out.print("|"+arrayQuadrado[i][j]+"|");
+			}
+		}
+		} catch(MatrixNotPossibleException e) {
+			System.out.println("Array errado");
+		} catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Erro: não é possível");
+		}
 		
 
 	}
@@ -75,6 +88,25 @@ public class RecursaoPrincipal {
 		return encontraPosicaoMenorValor(array, indice +1, menorValor);//chama o metodo até entrar no primeiro if
 	}
 	
+	
+	//Exe 4 imprima na diagonal
+	public static void printPrimaryDiagonal  (int[][] arrayBidiDeInt) throws MatrixNotPossibleException{
+		//verificar se o array é quadrado
+		if(arrayBidiDeInt.length % 2 != 0) {
+			throw new MatrixNotPossibleException();
+		}
+		
+		RecursaoPrincipal.printPrimaryDiagonal(arrayBidiDeInt, 0);
+	}
+	private static void printPrimaryDiagonal(int[][] array, int cont) {
+		//enquanto array nao chega ao fim faca
+		if(cont >= array.length) {
+			return;
+		} 
+		array[cont][cont] = 7;
+		
+		RecursaoPrincipal.printPrimaryDiagonal(array, cont +1);
+	}
 	
 
 	
