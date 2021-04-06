@@ -29,7 +29,7 @@ public class RecursaoPrincipal {
 		
 		//Exe4
 		try {
-		int[][] arrayQuadrado = new int[4][6];
+		double [][] arrayQuadrado = new double[6][6];
 		RecursaoPrincipal.printPrimaryDiagonal(arrayQuadrado);
 		for(int i =0; i < arrayQuadrado.length; i++) {
 			System.out.println();
@@ -90,15 +90,20 @@ public class RecursaoPrincipal {
 	
 	
 	//Exe 4 imprima na diagonal
-	public static void printPrimaryDiagonal  (int[][] arrayBidiDeInt) throws MatrixNotPossibleException{
+	public static void printPrimaryDiagonal  (double[][] arrayBidiDeInt) throws MatrixNotPossibleException, IllegalArgumentException{
+		//verificar se o array não é null
+		if(arrayBidiDeInt == null) {
+			throw new IllegalArgumentException();
+		}
+		
 		//verificar se o array é quadrado
-		if(arrayBidiDeInt.length % 2 != 0) {
+		if(arrayBidiDeInt.length != arrayBidiDeInt[0].length) {//para ser quadrada tem que ter a mesma quantia de linhas e colunas
 			throw new MatrixNotPossibleException();
 		}
 		
 		RecursaoPrincipal.printPrimaryDiagonal(arrayBidiDeInt, 0);
 	}
-	private static void printPrimaryDiagonal(int[][] array, int cont) {
+	private static void printPrimaryDiagonal(double[][] array, int cont) {
 		//enquanto array nao chega ao fim faca
 		if(cont >= array.length) {
 			return;
