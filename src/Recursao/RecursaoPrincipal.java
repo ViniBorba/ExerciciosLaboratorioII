@@ -130,7 +130,6 @@ public class RecursaoPrincipal {
 		
 	}
 	private static int binaryToDecimal(String binario, int indice, int potencia, int valorDecimal) {
-		//int decimal = 0;
 		if(indice < 8) {
 			if(binario.charAt(indice) == '1') {
 				valorDecimal = valorDecimal + (int) Math.pow(2, potencia);
