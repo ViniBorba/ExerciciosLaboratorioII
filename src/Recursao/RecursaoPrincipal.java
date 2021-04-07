@@ -44,6 +44,12 @@ public class RecursaoPrincipal {
 		}
 		
 
+		
+		System.out.println("\n");
+		System.out.println(RecursaoPrincipal.binaryToDecimal("11010001"));
+		
+		
+		
 	}
 	
 	//Exe 1 método recursivo que imprime um array recebido por parâmetro de trás para frente
@@ -113,6 +119,30 @@ public class RecursaoPrincipal {
 		RecursaoPrincipal.printPrimaryDiagonal(array, cont +1);
 	}
 	
+	
+	//Exe 5 recebe uma tring de 0 e 1 que representa um bite, se for 1 pega o 2 e eleva a potencia da posicao do idice
+	//Soma as pocicoes que tem o 1 e volta um inteiro
+	public static int binaryToDecimal(String binario) throws IllegalArgumentException {
+		if(binario == null || binario.length() != 8) {
+			throw new IllegalArgumentException();
+		}
+		return binaryToDecimal(binario, 0, 7, 0);
+		
+	}
+	private static int binaryToDecimal(String binario, int indice, int potencia, int valorDecimal) {
+		//int decimal = 0;
+		if(indice < 8) {
+			if(binario.charAt(indice) == '1') {
+				valorDecimal = valorDecimal + (int) Math.pow(2, potencia);
+				return binaryToDecimal(binario, indice +1, potencia -1, valorDecimal);
+			} else {
+				return binaryToDecimal(binario, indice +1, potencia -1, valorDecimal);
+			}
+		} else {
+			return valorDecimal;
+		}
+		
+	}
 
 	
 	
