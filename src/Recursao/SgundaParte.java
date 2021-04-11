@@ -17,6 +17,10 @@ public class SgundaParte {
 		
 		//Exe5
 		System.out.println(SgundaParte.palidromo("Eva, asse essa ave"));
+		
+		//Exe6
+		String[] arrayDeString = {"ovo", "galinha" ,"cacacac","melao"};
+		System.out.println(SgundaParte.vereficaQtdPalidromo(arrayDeString));
 
 
 	}
@@ -100,6 +104,29 @@ public class SgundaParte {
 			return false;
 		} 
 		return true;
+	}
+	
+	//Exe6 Crie um método recursivo que recebe um array de String e retorna a quantidade de posições que contém palíndromos neste array.
+	//Utilize o método desenvolvido no exercício 5 para auxiliar.
+	public static int vereficaQtdPalidromo(String[] arrayDeString) throws IllegalArgumentException {
+		if(arrayDeString == null) {
+			throw new IllegalArgumentException();
+		}
+		return vereficaQtdPalidromo(arrayDeString, 0, 0);
+		
+	}
+	private static int vereficaQtdPalidromo(String[] array, int indice, int acumulador) {
+		if(indice < array.length) {
+			/*if(palidromo(array[indice])) {
+				 return vereficaQtdPalidromo(array, indice +1, acumulador +1);
+			} else {
+				return vereficaQtdPalidromo(array, indice +1, acumulador);
+			}*/
+			//if ternatio
+			//return condição ? verdadeira : falça
+			return palidromo(array[indice]) ? vereficaQtdPalidromo(array, indice +1, acumulador +1) :  vereficaQtdPalidromo(array, indice +1, acumulador);
+		}
+		return acumulador;
 	}
 	
 	
