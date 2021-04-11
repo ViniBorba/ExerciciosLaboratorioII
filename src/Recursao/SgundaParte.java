@@ -14,6 +14,9 @@ public class SgundaParte {
 		
 		//Exe4
 		System.out.println(SgundaParte.somar(3));
+		
+		//Exe5
+		System.out.println(SgundaParte.palidromo("Eva, asse essa ave"));
 
 
 	}
@@ -74,7 +77,31 @@ public class SgundaParte {
 		return 1/cont;
 	}
 	
-	//Exe5 
+	//Exe5 Crie um método recursivo que retorna verdadeiro caso uma String recebida por parâmetro seja um palíndromo
+	//falso caso contrário. Um palíndromo é um texto que, desconsiderando espaços, pontuação e acentuação, 
+	//pode ser lido da mesma forma tanto de frente pra trás quanto de trás para frente. Por exemplo:
+	//Ana - Renner - O teu dueto - Eva, asse essa ave - Seco de raiva, coloco no colo caviar e doces
+	//Fica facil escrever palindromos com nomes proprios, como fazem Mezaf Omocso, Irporp Semon, Mocs Omord, Nila Prevercs e Lica Facif
+	//No seu método público, antes de chamar o método privado, você deve remover pontuações
+	//(exclamações, pontos de interrogação, pontos finais e vírgulas) e espaços, para então chamar o método privado.
+	public static boolean palidromo(String palidromo) throws IllegalArgumentException {
+		if(palidromo == null) {
+			throw new IllegalArgumentException();
+		}
+		palidromo = palidromo.replaceAll("[\\\\,.?!@#(){}\\[\\]\\/]", "").toUpperCase();
+		return palidromo(palidromo, 0, 1);
+		
+	}
+	private static boolean palidromo(String palidromo, int contChar, int i) {
+		if(palidromo.length() > i) {
+		if(palidromo.charAt(contChar) == palidromo.charAt(palidromo.length() -i)) {
+			return palidromo(palidromo, contChar +1, i+1);
+		} 
+			return false;
+		} 
+		return true;
+	}
+	
 	
 	
 	
