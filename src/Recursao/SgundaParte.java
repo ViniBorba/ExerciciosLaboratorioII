@@ -11,6 +11,9 @@ public class SgundaParte {
 		
 		//Exe3
 		System.out.println(SgundaParte.viraString("vini").toString());
+		
+		//Exe4
+		System.out.println(SgundaParte.somar(3));
 
 
 	}
@@ -54,8 +57,26 @@ public class SgundaParte {
 			return viraString(palavra, arrayDaPalavra, indicePalavra -1, indiceChar +1);
 		}
 		
-		return String.copyValueOf(arrayDaPalavra);
+		return String.copyValueOf(arrayDaPalavra);//transforma array de char em palavra
 	}
+	
+	//Exe4 método recursivo que recebe um inteiro positivo (e maior que 0) N e calcula o seguinte: 1 + 1/2 + 1/3 + 1/4 + 1/5 + ... + 1/N
+	public static double somar(int numero) throws IllegalArgumentException {
+		if(numero <= 0) {
+			throw new IllegalArgumentException();
+		}
+		return somar(numero, 1);
+	}
+	private static double somar(int numero, double cont) {
+		if(cont < numero) {
+			return 1/cont + somar(numero, cont +1);
+		}
+		return 1/cont;
+	}
+	
+	//Exe5 
+	
+	
 	
 
 }
