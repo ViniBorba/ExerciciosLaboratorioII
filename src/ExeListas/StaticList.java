@@ -1,6 +1,6 @@
 package ExeListas;
 /**
- * Implementação de um lista linear com armazenamento estático
+ * Implementaï¿½ï¿½o de um lista linear com armazenamento estï¿½tico
  * @author ViniBorba
  * baseado em array
  */
@@ -9,7 +9,7 @@ public class StaticList <E> implements List<E> {
 	private int numElements;
 	
 	/**
-	 * Construtor de uma lista com um tamaqnho máximo
+	 * Construtor de uma lista com um tamaqnho mï¿½ximo
 	 * @param maxSize O tamanho da lista
 	 */
 	public StaticList(int maxSize) {
@@ -17,34 +17,33 @@ public class StaticList <E> implements List<E> {
 		numElements = 0;
 	}
 
-	@Override
+	//@Override
 	public int numElements() {
 		return numElements;
 	}
 
-	@Override
+	//@Override
 	public boolean isEmpty() {
 		return numElements == 0;//retorna true se a lista estiver vazia
 	}
 
-	@Override
+	//@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
 		return numElements == elements.length; //return true se a lista estiver cheia
 	}
 
-	@Override
+	//@Override
 	public void insert(E element, int pos) throws OverflowException, IndexOutOfBoundsException {
-		//verefica se tem espaço na lista, vendo se ela não está cheia
+		//verefica se tem espaï¿½o na lista, vendo se ela nï¿½o estï¿½ cheia
 		if (isFull())
 			throw new OverflowException();
 		
-		//verifica se é válida a posição para inserir
+		//verifica se ï¿½ vï¿½lida a posiï¿½ï¿½o para inserir
 		if (pos < 0 || pos > numElements)
 			throw new IndexOutOfBoundsException();
 		
-		//Desloca para a direita os elementos necessários
-		//abrindo espaço para o novo elemento
+		//Desloca para a direita os elementos necessï¿½rios
+		//abrindo espaï¿½o para o novo elemento
 		for (int i = numElements -1; i >= pos; i--)
 			elements[i+1] = elements[i];
 		
@@ -53,53 +52,53 @@ public class StaticList <E> implements List<E> {
 		numElements++;
 	}
 
-	@Override
+	//@Override
 	public E remove(int posicao) throws UnderflowException, IndexOutOfBoundsException {
-		// Verefica se a lista está vazia, para ter onde apagar
+		// Verefica se a lista estï¿½ vazia, para ter onde apagar
 		if(isEmpty())
 			throw new UnderflowException();
 		
-		//verefica se a posição é válida
+		//verefica se a posiï¿½ï¿½o ï¿½ vï¿½lida
 		if (posicao < 0 || posicao >= numElements)
 			throw new IndexOutOfBoundsException();
 		
 		//Guarda uma referencia temporaria ao elemento removido
 		E element = elements[posicao];
 		
-		//Desloca para a esquerda os elementos necessários,
-		//sobrescrevendo a posição do que está sendo removido
+		//Desloca para a esquerda os elementos necessï¿½rios,
+		//sobrescrevendo a posiï¿½ï¿½o do que estï¿½ sendo removido
 		for(int i = posicao; i < numElements -1; i++)
 			elements[i] = elements[i+1];
 		
-		//define para null a posição antes ocupada pelo último,
-		//sobrescrevendo a posição do que está sendo removido
+		//define para null a posiï¿½ï¿½o antes ocupada pelo ï¿½ltimo,
+		//sobrescrevendo a posiï¿½ï¿½o do que estï¿½ sendo removido
 		elements[numElements -1] = null;
 		numElements--;
 		
 		return element;
 	}
 
-	@Override
+	//@Override
 	public E get(int posicao) throws IndexOutOfBoundsException {
-		// verefica se a posição é valida
+		// verefica se a posiï¿½ï¿½o ï¿½ valida
 		if(posicao < 0 || posicao >= numElements)
 			throw new IndexOutOfBoundsException();
 		
 		return elements[posicao];
 	}
 
-	@Override
+	//@Override
 	public int search(E element) {
 		for(int i =0; i < numElements; i++)
 			if(element.equals(elements[i]))
 				return i;
 		
-		//se não achar nada retorna -1
+		//se nï¿½o achar nada retorna -1
 		return -1;
 	}
 	
 	/**
-	 * Retorna uma representação String da lista
+	 * Retorna uma representaï¿½ï¿½o String da lista
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString() {
