@@ -1,7 +1,7 @@
 package ExeListas;
 /**
  * Interface que define o comportamento de uma lista lenear
- * @author vinic
+ * @author ViniBorba
  */
 public interface List<E> {
 	/**

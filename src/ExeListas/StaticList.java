@@ -1,7 +1,7 @@
 package ExeListas;
 /**
  * Implementação de um lista linear com armazenamento estático
- * @author vinic
+ * @author ViniBorba
  * baseado em array
  */
 public class StaticList <E> implements List<E> {
