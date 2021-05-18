@@ -11,47 +11,47 @@ public interface List<E> {
 	public int numElements();
 	
 	/**
-	 * Informa se a lista esta está vazia
+	 * Informa se a lista esta estï¿½ vazia
 	 * @return verdadeiro se a lista estiver vazia,
-	 * 					falso caso contrário.
+	 * 					falso caso contrï¿½rio.
 	 */
 	public boolean isEmpty();
 	
 	/**
-	 * Informa se a lista está cheia
+	 * Informa se a lista estï¿½ cheia
 	 * @return Verdadeiro se a lista estiver cheia,
-	 * 				falso caso contrários
+	 * 				falso caso contrï¿½rios
 	 */
 	public boolean isFull();
 	
 	/**
-	 * Insere um novo elemento na posição indicada.
+	 * Insere um novo elemento na posiï¿½ï¿½o indicada.
 	 * @param element O elemento a ser inserido
-	 * @param pos A posição onde o elemento será inserido
+	 * @param pos A posiï¿½ï¿½o onde o elemento serï¿½ inserido
 	 * 							(iniciando em 0)
 	 */
-	public void insert(E element, int pos);
+	public void insert(E element, int pos)throws OverflowException, IndexOutOfBoundsException;
 	
 	/**
-	 * Remove o elemento da posição indicada
-	 * @param pos A posição de onde o elemento será removido
+	 * Remove o elemento da posiï¿½ï¿½o indicada
+	 * @param pos A posiï¿½ï¿½o de onde o elemento serï¿½ removido
 	 * 							(iniciando em 0)
 	 * @return O elemento removido
 	 */
-	public E remove(int posicao);
+	public E remove(int posicao)throws UnderflowException, IndexOutOfBoundsException;
 	
 	/**
-	 * Retorna o elemento da posição indicada, sem removê lo
-	 * @param pos A posição do elemento
+	 * Retorna o elemento da posiï¿½ï¿½o indicada, sem removï¿½ lo
+	 * @param pos A posiï¿½ï¿½o do elemento
 	 * @return O elemento
 	 */
-	public E get(int posicao);
+	public E get(int posicao)throws IndexOutOfBoundsException;
 	
 	/**
-	 * Localiza a primeira ocorrência do elemento indicado na lista
+	 * Localiza a primeira ocorrÃªncia do elemento indicado na lista
 	 * @param element O elemento a ser localizado
-	 * @return A posição da primeira ocorrencia do elemento
-	 * 						ou -1 se ele não for encontrado
+	 * @return A posiÃ§Ã£o da primeira ocorrencia do elemento
+	 * 						ou -1 se ele nï¿½o for encontrado
 	 */
 	public int search(E element);
 }

@@ -1,6 +1,6 @@
 package ExeListas;
 /**
- * Implementa��o de um lista linear com armazenamento est�tico
+ * Implementacao de um lista linear com armazenamento estatico
  * @author ViniBorba
  * baseado em array
  */
