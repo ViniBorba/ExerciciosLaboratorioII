@@ -93,7 +93,7 @@ public class StaticList <E> implements List<E> {
 			if(element.equals(elements[i]))
 				return i;
 		
-		//se n�o achar nada retorna -1
+		//se não achar nada retorna -1
 		return -1;
 	}
 	
