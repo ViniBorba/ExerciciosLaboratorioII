@@ -21,7 +21,7 @@ public interface Stack<E> {
 	 * Informa a quantidade de elementos armazenados na pilha
 	 * @return A quantidade de elementos armazenados na pilha
 	 */
-	public int numElemens();
+	public int numElements();
 	
 	/**
 	 * Adiciona um novo elementos pilha

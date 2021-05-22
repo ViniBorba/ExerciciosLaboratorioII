@@ -13,25 +13,25 @@ public class StaticStack<E> implements Stack<E>{
 	 */
 	public StaticStack (int maxSize) {
 		elements = (E[]) new Object[maxSize]; //cria o array de elementos
-		stackTop =0;
+		stackTop = -1;
 	}
 
 	//@Override
 	public boolean isEmpty() {
 		// TODO se for igual a zero retorna verdadeiro
-		return stackTop == 0;
+		return stackTop == -1;
 	}
 
 	//@Override
 	public boolean isFull() {
 		// se o topo da pilha == array.lenght é pq a pilha está cheia
-		return stackTop == elements.length;
+		return stackTop == elements.length -1;
 	}
 
 	//@Override
-	public int numElemens() {
+	public int numElements() {
 		// retorna a quantia de elementos na pilha
-		return stackTop;
+		return stackTop +1;
 	}
 
 	//@Override
@@ -40,8 +40,8 @@ public class StaticStack<E> implements Stack<E>{
 		if(isFull())
 			throw new OverflowException();
 		
-		elements[stackTop] = element;
-		stackTop++;
+		elements[++stackTop] = element;
+		//stackTop++;
 	}
 
 	//@Override
@@ -50,9 +50,9 @@ public class StaticStack<E> implements Stack<E>{
 		if(isEmpty())
 			throw new UnderflowException();
 		
-		E element = elements[stackTop -1];
-		elements[stackTop -1] = null;
-		stackTop--;
+		E element = elements[stackTop];
+		elements[stackTop --] = null;
+		//stackTop--;
 		return element;
 	}
 
@@ -62,7 +62,19 @@ public class StaticStack<E> implements Stack<E>{
 		if(isEmpty())
 			throw new UnderflowException();
 		
-		return elements[stackTop -1];
+		return elements[stackTop];
+	}
+	
+	public String toString() {
+		if(isEmpty())
+			return "Erro";
+		else {
+			String s = "\n";
+			for(int i = numElements() -1; i >= 0; i--) {
+				s += "|" + elements[i];
+			}
+			return s;
+		}
 	}
 
 }
