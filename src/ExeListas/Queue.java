@@ -13,7 +13,7 @@ public interface Queue<E> {
 	public boolean isEmpty();
 	
 	/**
-	 * INforma se a fila está cheia
+	 * Informa se a fila está cheia
 	 * @return Verdadeiro se a fila estiver cheia, falso caso contrário
 	 */
 	public boolean isFull();
