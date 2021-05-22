@@ -22,7 +22,7 @@ public interface Queue<E> {
 	 * Informa a quantidade de elementos armazenados da fila
 	 * @return A quantidade de elementos armazenados da fila
 	 */
-	public int numElementos();
+	public int numElements();
 	
 	/**
 	 * Insere um novo elementos da fila
