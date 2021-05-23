@@ -35,8 +35,8 @@ public class StaticStack<E> implements Stack<E>{
 	}
 
 	//@Override
-	public void push(E element) throws OverflowException {// Adiciona um novo elementos pilha
-		// Verefica se a pilha não está cheia
+	public void push(E element) throws OverflowException {
+		// Adiciona um novo elementos pilha
 		if(isFull())
 			throw new OverflowException();
 		
@@ -77,7 +77,7 @@ public class StaticStack<E> implements Stack<E>{
 	}
 	private int contaElementos(E el, int cont, int aux) {
 		//int aux = stackTop;
-		if(aux > 0) {
+		if(aux >= 0) {
 			if(elements[aux].equals(el)) {
 				//cont++;
 				//aux--;
