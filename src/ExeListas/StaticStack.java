@@ -65,6 +65,31 @@ public class StaticStack<E> implements Stack<E>{
 		return elements[stackTop];
 	}
 	
+	/**
+	 * Método para o trabalho do môdulo 4
+	 * Implementação de um metodo recursivo que conta a quantidade de vezes que o elemento se repete na pilha
+	 */
+	public int contaElementos(E el) throws IllegalArgumentException {
+		if(el == null)
+			throw new IllegalArgumentException();
+		int aux = stackTop;
+		return contaElementos(el, 0, aux);
+	}
+	private int contaElementos(E el, int cont, int aux) {
+		//int aux = stackTop;
+		if(aux > 0) {
+			if(elements[aux].equals(el)) {
+				//cont++;
+				//aux--;
+				return contaElementos(el, cont +1, aux -1);
+			} else {
+				//aux--;
+				return contaElementos(el, cont, aux -1);
+			}
+		}
+		return cont;
+	}
+	
 	public String toString() {
 		if(isEmpty())
 			return "Erro";
