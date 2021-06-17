@@ -61,6 +61,24 @@ public class SinglyLinkedList<E> implements List<E> {
 		return element;
 	}
 	
+	public E removeLast() throws UnderflowException{
+		if(isEmpty()) throw new UnderflowException();
+		
+		E element = tail.getElement();
+		
+		if(head == tail)
+			head = tail = null;
+		else {
+			Node<E> current = head;
+			while(current.getNext() != tail)
+				current = current.getNext();
+			tail = current;
+			current.setNext(null);
+		}
+		numElements--;
+		return element;
+	}
+	
 	@Override
 	public E remove(int posicao) throws UnderflowException, IndexOutOfBoundsException {
 		// TODO Auto-generated method stub
