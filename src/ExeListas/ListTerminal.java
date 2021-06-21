@@ -8,6 +8,7 @@ public class ListTerminal {
 			arrayInt[i] = i;
 		}
 		
+		/*
 		StaticStack pilha = new StaticStack(30);
 		pilha.push(2);
 		pilha.push(2);
@@ -20,7 +21,18 @@ public class ListTerminal {
 		System.out.println(pilha.numElements());
 		System.out.println(pilha.top());
 		System.out.println(pilha.contaElementos(2));
-
+		*/
+		
+		SinglyLinkedList Palavras = new SinglyLinkedList(); 
+		
+		Palavras.insertFirst("Um");
+		Palavras.insertFirst("Dois");
+		Palavras.insertFirst("Tres");
+		Palavras.insertFirst("Quatro");
+		
+		Palavras.removeFirst();
+		System.out.println(Palavras.numElements());
+		
 	}
 
 }
