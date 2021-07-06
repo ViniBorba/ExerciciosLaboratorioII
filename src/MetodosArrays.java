@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class MetodosArrays {
 
-	// Exe 1 Faça um metodo chamado exercicio1 que recebe um array de inteiros e imprima-o ao contrário.
+	// Exe 1 Faï¿½a um metodo chamado exercicio1 que recebe um array de inteiros e imprima-o ao contrï¿½rio.
 	public static void pressContrario(int[] array) {
 		for (int i = array.length -1; i >= 0; i--) {
-			System.out.println(array[i]);//se somente colocar i vai mostrar a posição do array
+			System.out.println(array[i]);//se somente colocar i vai mostrar a posiï¿½ï¿½o do array
 		}
 	}
 	
-	//Exe 3 Faça um método recebe um array de inteirose retorna um novo array que contém somente os valores pares do array recebido
+	//Exe 3 Faï¿½a um mï¿½todo recebe um array de inteirose retorna um novo array que contï¿½m somente os valores pares do array recebido
 	public static void retornaPar(int[] arrayInteiro) {
-		//para descobrir quantos N par tem o array recebido e o novo array com número certo
+		//para descobrir quantos N par tem o array recebido e o novo array com nï¿½mero certo
 		int numerosDePar = 0;
 		
 		for(int i = 0; i < arrayInteiro.length; i++) {
@@ -34,13 +34,13 @@ public class MetodosArrays {
 			}
 			System.out.println("Tamanho do Array Auxiliar: " + arrayAux.length);
 			for(int j = 0; j < arrayAux.length; j++) {
-				System.out.println("Os números pares são: " + arrayAux[j]);
+				System.out.println("Os nï¿½meros pares sï¿½o: " + arrayAux[j]);
 			}
 		}
 	}
 	
-	//Exe 4 Faça um método q recebe um array de String e uma String x por  parâmetro.
-	//Este  método  retorna  a  posição  em  que a  String  x  está  no  array,  ou -1  se  a String x não estiver no array.
+	//Exe 4 Faï¿½a um mï¿½todo q recebe um array de String e uma String x por  parï¿½metro.
+	//Este  mï¿½todo  retorna  a  posiï¿½ï¿½o  em  que a  String  x  estï¿½  no  array,  ou -1  se  a String x nï¿½o estiver no array.
 	public static int retornaPosicao(String[] nomes, String nomeEncontrar) {
 		for(int i = 0; i < nomes.length; i++) {
 			if(nomes[i].equalsIgnoreCase(nomeEncontrar)) {
@@ -50,8 +50,8 @@ public class MetodosArrays {
 		return -1;
 	}
 	
-	//Exe5 Faça um método q recebe um array de boolean e 
-	//retorna um array de inteiros contendo 1 nas posições que são true e 0 nas posições que são false.
+	//Exe5 Faï¿½a um mï¿½todo q recebe um array de boolean e 
+	//retorna um array de inteiros contendo 1 nas posiï¿½ï¿½es que sï¿½o true e 0 nas posiï¿½ï¿½es que sï¿½o false.
 	public static void zeroUm(boolean[] arrayDeBoolean) {
 		int auxVoltar[] = new int[arrayDeBoolean.length];
 		
@@ -69,7 +69,7 @@ public class MetodosArrays {
 		}
 	}
 	
-	//Exe6 Faça um método q recebe dois arrays de inteiros, e retorna um terceiro array com todos os elementos dos dois arrays.
+	//Exe6 Faï¿½a um mï¿½todo q recebe dois arrays de inteiros, e retorna um terceiro array com todos os elementos dos dois arrays.
 	public static void terceiroArray(int[] primeiroArray, int[] segundoArray) {
 		int[] arrayTerceiro = new int[primeiroArray.length + segundoArray.length];
 		int auxIndiceArray = 0;
@@ -85,11 +85,11 @@ public class MetodosArrays {
 		
 		System.out.println("Tamanho do arrey: "+arrayTerceiro.length);
 		for(int i = 0; i < arrayTerceiro.length; i++) {
-			System.out.println("Valor na posição "+i+" é: "+arrayTerceiro[i]);
+			System.out.println("Valor na posiï¿½ï¿½o "+i+" ï¿½: "+arrayTerceiro[i]);
 		}
 	}
 	
-	//Exe7 Faça um método q recebe dois arrays de inteiros, e retorna um terceiro array que possui todos os elementos
+	//Exe7 Faï¿½a um mï¿½todo q recebe dois arrays de inteiros, e retorna um terceiro array que possui todos os elementos
 	//negativos (dos dois arrays) na primeira parte e todos os elementos positivos (inclusive o zero) na segunda parte (dos dois arrays).
 	public static void arrayMenosMais(int[] primeiroArray, int[] segundoArray) {
 		int[] arrayTerceiro = new int[primeiroArray.length + segundoArray.length];
@@ -104,7 +104,7 @@ public class MetodosArrays {
 			auxIndiceArray++;
 		}
 		/*
-		//metodo para trocar os números, se for maior que o próximo, faz a troca
+		//metodo para trocar os nï¿½meros, se for maior que o prï¿½ximo, faz a troca
 		for(int i = 0; i < arrayTerceiro.length; i++) {
 			if(i+1 == arrayTerceiro.length) {
 				break;
@@ -120,11 +120,11 @@ public class MetodosArrays {
 		*/
 		
 		for(int i = 0; i < arrayTerceiro.length; i++) {
-			System.out.println("Valor na posição "+i+" é: "+arrayTerceiro[i]);
+			System.out.println("Valor na posiï¿½ï¿½o "+i+" ï¿½: "+arrayTerceiro[i]);
 		}
 	}
 	
-	//Exe8 Faça um método chamado q recebe um array de char e imprime na tela (na mesma linha) todos os elementos do array
+	//Exe8 Faï¿½a um mï¿½todo chamado q recebe um array de char e imprime na tela (na mesma linha) todos os elementos do array
 	public static void imprimeChar(char[] recebeChar) {
 		for(int i = 0; i < recebeChar.length; i++) {
 			System.out.print(recebeChar[i]);
@@ -132,19 +132,19 @@ public class MetodosArrays {
 	}
 	
 	
-	//Exe1 Crie um método que retorna oarray bidimensional de inteiros
+	//Exe1 Crie um mï¿½todo que retorna oarray bidimensional de inteiros
 	public static int[][] arrayBidim(){
 		int[][] arrayBi = new int[3][10];
 		for(int linha = 0; linha < 3; linha++) {
 			for(int coluna = 0; coluna < 10; coluna++) {
-				arrayBi[linha][coluna] = coluna; //recebe UM VALOR o posição do eixo xy
+				arrayBi[linha][coluna] = coluna; //recebe UM VALOR o posiï¿½ï¿½o do eixo xy
 			}
 		}
 		return arrayBi;
 	}
 	
 	
-	//Exe2 Crie um método que retorna oarray bidimensional maior que o anterior de int
+	//Exe2 Crie um mï¿½todo que retorna oarray bidimensional maior que o anterior de int
 	public static void arrayBidimensionalMaior() {
 		int [][] arrayBidim = new int [5][10];
 		
@@ -205,9 +205,22 @@ public class MetodosArrays {
 			System.out.println("ERRO!!");
 			e.printStackTrace();//para mostrar o erro mesmo com o try
 		}finally {
-			System.out.println("Sempre é executado o finally");
+			System.out.println("Sempre ï¿½ executado o finally");
 		}
 		return 0.0;
+	}
+	
+	public static int[] retornaArray(int[][] matrizInt ){
+		int[] arrayInt = new int[matrizInt.length];
+		
+		for(int linha =0; linha < matrizInt.length; linha++) {
+			for(int coluna =0; coluna < matrizInt[linha].length; coluna++) {
+				if(matrizInt[linha][coluna] < 0) {
+					arrayInt[linha + coluna] = matrizInt[linha][coluna];
+				}
+			}
+		}
+		return arrayInt;
 	}
 	
 	

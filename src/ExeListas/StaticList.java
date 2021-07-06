@@ -107,4 +107,9 @@ public class StaticList <E> implements List<E> {
 			s += elements[i] + " ";//concatena tudo em uma string
 		return s;
 	}
+	
+	public boolean insertAfter(E obj1, E obj2) {
+		obj1.equals(obj1);
+		return false;
+	}
 }

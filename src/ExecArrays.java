@@ -5,7 +5,7 @@ public class ExecArrays {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//MetodosArrays testarMetodosArray = new MetodosArrays(); Se usar metodos static não precisa instanciar pra chamar o metodo
+		//MetodosArrays testarMetodosArray = new MetodosArrays(); Se usar metodos static nï¿½o precisa instanciar pra chamar o metodo
 		
 		int[] arrayDeInt = new int[10];
 		arrayDeInt[0]= 2;
@@ -24,7 +24,7 @@ public class ExecArrays {
 		segunoArrayDeInt[1] = 12;
 		segunoArrayDeInt[2] = -2;
 		
-		//array de objetos não basta ser instanciada, também tem que ser popupada por ojetos do tipo declarado
+		//array de objetos nï¿½o basta ser instanciada, tambï¿½m tem que ser popupada por ojetos do tipo declarado
 		String[] arrayDeString = new String[5];
 		arrayDeString[0] = "Vini";
 		arrayDeString[1] = "Maria";
@@ -45,7 +45,24 @@ public class ExecArrays {
 		arrayChar[3] = '.';
 		arrayChar[4] = '.';
 		
+		int[][] arrayMatriz = new int[2][2];
+		arrayMatriz[0][0] = -2;
+		arrayMatriz[0][1] = -2;
+		arrayMatriz[1][0] = -2;
+		arrayMatriz[1][1] = -2;
 		
+		//retornaArray
+		System.out.println(MetodosArrays.retornaArray(arrayMatriz));
+		MetodosArrays.retornaArray(arrayMatriz);
+		
+		
+		for(int linha =0; linha < arrayMatriz.length; linha++) {
+			for(int coluna =0; coluna < arrayMatriz[linha].length; coluna++) {
+				
+					System.out.println(arrayMatriz[linha][coluna]);
+				
+			}
+		}
 		//Exe1
 		//MetodosArrays.pressContrario(arrayDeInt);
 		
@@ -98,7 +115,7 @@ public class ExecArrays {
 		//MetodosArrays.matrizDeAleatoria();
 
 		//System.out.println();
-		System.out.println(MetodosArrays.dividir(7, 0));
+		//System.out.println(MetodosArrays.dividir(7, 0));
 		//MetodosArrays.dividir(7, 3);
 		
 	}

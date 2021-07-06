@@ -40,7 +40,7 @@ public class RecursaoPrincipal {
 		} catch(MatrixNotPossibleException e) {
 			System.out.println("Array errado");
 		} catch(ArrayIndexOutOfBoundsException e) {
-			System.out.println("Erro: não é possível");
+			System.out.println("Erro: nï¿½o ï¿½ possï¿½vel");
 		}
 		
 
@@ -52,7 +52,7 @@ public class RecursaoPrincipal {
 		
 	}
 	
-	//Exe 1 método recursivo que imprime um array recebido por parâmetro de trás para frente
+	//Exe 1 mï¿½todo recursivo que imprime um array recebido por parï¿½metro de trï¿½s para frente
 	public static void imprimeArrayAoContrario(int[] array, int indice) {
 		if(indice >= 0) {
 			System.out.println(array[indice]);
@@ -61,23 +61,23 @@ public class RecursaoPrincipal {
 		}
 	}
 	
-	//Exe 2 método  recursivo  que  recebe  um  array  bidimensional  de  double  e retorna a soma dos elementos deste array
+	//Exe 2 mï¿½todo  recursivo  que  recebe  um  array  bidimensional  de  double  e retorna a soma dos elementos deste array
 	public static double somaBidimensional(double[][] arrayBidi) {
-		return somaBidimensional(arrayBidi, 0, 0);//vou te retornar esse método que é um metodo que retorna um double
+		return somaBidimensional(arrayBidi, 0, 0);//vou te retornar esse mï¿½todo que ï¿½ um metodo que retorna um double
 	}
 	private static double somaBidimensional(double[][] arrayBidi, int linha, int coluna) {
 		if(linha >= arrayBidi.length) {
-			return 0;//quando não tiver mais linhas eu retorno zero	
+			return 0;//quando nï¿½o tiver mais linhas eu retorno zero	
 		}
 		if(coluna >= arrayBidi[linha].length) {
-			return somaBidimensional(arrayBidi, linha + 1, 0);//quando terminar as colunas eu vou para a próxima linha
+			return somaBidimensional(arrayBidi, linha + 1, 0);//quando terminar as colunas eu vou para a prï¿½xima linha
 		}
 		
 		return arrayBidi[linha][coluna] + somaBidimensional(arrayBidi, linha, coluna +1);//quando terminar linhas e colunas e retorno a soma de traz pra frente
 	}
 	
-	//Exe 3 rie  um  método  chamado  encontraPosicaoMenorValor.
-	//encontrar  a  posição  do  menor  valor  de  um  array  de  inteiros  recebido  por parâmetro
+	//Exe 3 rie  um  mï¿½todo  chamado  encontraPosicaoMenorValor.
+	//encontrar  a  posiï¿½ï¿½o  do  menor  valor  de  um  array  de  inteiros  recebido  por parï¿½metro
 	public static int encontraPosicaoMenorValor(int[] arrayInt) throws IllegalArgumentException {
 		if(arrayInt == null) {
 			throw new IllegalArgumentException();
@@ -91,18 +91,18 @@ public class RecursaoPrincipal {
 		if(array[indice] < array[menorValor]) {
 			menorValor = indice;//se existier um valor menor, armaxena o indice desse valor
 		}
-		return encontraPosicaoMenorValor(array, indice +1, menorValor);//chama o metodo até entrar no primeiro if
+		return encontraPosicaoMenorValor(array, indice +1, menorValor);//chama o metodo atï¿½ entrar no primeiro if
 	}
 	
 	
 	//Exe 4 imprima na diagonal
 	public static void printPrimaryDiagonal  (double[][] arrayBidiDeInt) throws MatrixNotPossibleException, IllegalArgumentException{
-		//verificar se o array não é null
+		//verificar se o array nï¿½o ï¿½ null
 		if(arrayBidiDeInt == null) {
 			throw new IllegalArgumentException();
 		}
 		
-		//verificar se o array é quadrado
+		//verificar se o array ï¿½ quadrado
 		if(arrayBidiDeInt.length != arrayBidiDeInt[0].length) {//para ser quadrada tem que ter a mesma quantia de linhas e colunas
 			throw new MatrixNotPossibleException();
 		}
@@ -142,6 +142,8 @@ public class RecursaoPrincipal {
 		}
 		
 	}
+	
+
 
 	
 	
