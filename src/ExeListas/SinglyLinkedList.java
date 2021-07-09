@@ -1,5 +1,6 @@
 package ExeListas;
 
+//Lista Simplesmente encadeada
 public class SinglyLinkedList<E> implements List<E> {
 	private Node<E> head;
 	private Node<E> tail;
@@ -25,7 +26,7 @@ public class SinglyLinkedList<E> implements List<E> {
 
 	//@Override
 	public boolean isFull() {
-		// nunca vai estar cheio nesse caso
+		// nunca vai estar cheio nesse caso, por ser uma lista
 		return false;
 	}
 
@@ -43,6 +44,19 @@ public class SinglyLinkedList<E> implements List<E> {
 			//Então, na verdade, eu nunca vou ter tirado de um para outro, eu apenas vou mudar na lista qual é o atual head
 			//Mas os Nodes sempre vão ter guardados a posição de memoria de quando eles foram head
 			// É assim que os nodes referenciam um ao outro
+		}
+		numElements++;
+	}
+	
+	public void insertLast (E element) throws NullPointerException{
+		if (element == null) throw new NullPointerException();
+		
+		Node<E> newNode = new Node<>(element);//cria o no
+		if(isEmpty())//se tiver vazia coloca tudo isso no mesmo no
+			head = tail = newNode;
+		else {//se tiver outros nos
+			tail.setNext(newNode);//no tail atual seta um novo no
+			tail = newNode;//fala para variavel tail agora é o novo no
 		}
 		numElements++;
 	}
@@ -80,27 +94,86 @@ public class SinglyLinkedList<E> implements List<E> {
 	}
 	
 	@Override
-	public E remove(int posicao) throws UnderflowException, IndexOutOfBoundsException {
+	public E remove(int posicao) throws IndexOutOfBoundsException {
 		// TODO Auto-generated method stub
-		return null;
+		if(posicao < 0 || posicao >= numElements)
+			throw new IndexOutOfBoundsException();
+		
+		if(posicao == 0) return removeFirst();
+		else if(posicao == numElements -1) return removeLast();
+		else {
+			Node<E> current = head;//
+			for(int i =0; i < posicao -1; i++) //
+				current = current.getNext();
+			
+			E element = current.getNext().getElement();
+			current.setNext(current.getNext().getNext());
+			
+			numElements--;
+			return element;
+		}
 	}
 
 	@Override
 	public E get(int posicao) throws IndexOutOfBoundsException {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int search(E element) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void insert(E element, int pos) throws OverflowException, IndexOutOfBoundsException {
-		// TODO Auto-generated method stub
+		if(posicao < 0 || posicao >= numElements)
+			throw new IndexOutOfBoundsException();
 		
+		Node<E> current = head;
+		for(int i =0; i < posicao; i++)
+			current = current.getNext();
+		
+		return current.getElement();
+	}
+
+	@Override
+	public int search(E element) throws NullPointerException {
+		// TODO Auto-generated method stub
+		if(element == null) throw new NullPointerException();
+		
+		Node<E> current = head;
+		int i = 0;
+		while(current != null) {
+			if(element.equals(current.getElement()))
+				return i;
+			i++;
+			current = current.getNext();
+		}
+		return -1;
+	}
+
+	@Override
+	public void insert(E element, int pos) throws NullPointerException, IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		if(element == null) throw new NullPointerException();
+		if(pos < 0 || pos > numElements) throw new IndexOutOfBoundsException();
+		
+		if(pos == 0)//se posicao for zero chama o inserir primeiro
+			insertFirst(element);
+		else if(pos == numElements)//se posicao for a ultima chama o inserir por ultimo
+			insertLast(element);
+		else {//se for uma posicao no meio
+			Node<E> current = head;//cria um node e faz ele iniciar em head
+			for(int i =0; i < pos -1; i++) //faz um for para o no current ir até a posicao
+				current = current.getNext();
+				
+			Node<E> newNode = new Node<>(element);
+			newNode.setNext(current.getNext());
+			current.setNext(newNode);
+			numElements++;
+		}
+	}
+	
+	public String toString() {
+		String s = "";
+		
+		Node<E> current = head;
+		while(current != null) {
+			s += current.getElement().toString() + " - ";
+			current = current.getNext();
+		}
+		return s;
 	}
 
 }
