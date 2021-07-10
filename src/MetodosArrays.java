@@ -223,6 +223,22 @@ public class MetodosArrays {
 		return arrayInt;
 	}
 	
+	public static void imprimeArrayInvertido(int[][] m) {
+		if(m == null)
+			throw new IllegalArgumentException();
+		
+		int vLinha = m.length -1;
+		int vColuna = m[vLinha].length -1;
+		
+		
+		
+		for(int linha = vLinha; linha >= 0; linha--) {
+			for(int coluna = vColuna; vColuna >= 0; coluna--) {
+				System.out.println(m[linha][coluna]);
+			}
+		}
+	}
+	
 	
 	
 }

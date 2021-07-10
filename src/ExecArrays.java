@@ -19,6 +19,8 @@ public class ExecArrays {
 		arrayDeInt[8]= 9;
 		arrayDeInt[9]= 10;
 		
+		
+		
 		int[] segunoArrayDeInt = new int[3];
 		segunoArrayDeInt[0] = 11;
 		segunoArrayDeInt[1] = 12;
@@ -46,12 +48,13 @@ public class ExecArrays {
 		arrayChar[4] = '.';
 		
 		int[][] arrayMatriz = new int[2][2];
-		arrayMatriz[0][0] = -2;
-		arrayMatriz[0][1] = -2;
-		arrayMatriz[1][0] = -2;
-		arrayMatriz[1][1] = -2;
+		arrayMatriz[0][0] = 1;
+		arrayMatriz[0][1] = 2;
+		arrayMatriz[1][0] = 3;
+		arrayMatriz[1][1] = 4;
 		
-		//retornaArray
+		MetodosArrays.imprimeArrayInvertido(arrayMatriz);
+		
 		System.out.println(MetodosArrays.retornaArray(arrayMatriz));
 		MetodosArrays.retornaArray(arrayMatriz);
 		
@@ -63,6 +66,8 @@ public class ExecArrays {
 				
 			}
 		}
+		//retornaArray
+	
 		//Exe1
 		//MetodosArrays.pressContrario(arrayDeInt);
 		

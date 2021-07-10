@@ -97,6 +97,19 @@ public class StaticList <E> implements List<E> {
 		return -1;
 	}
 	
+	public boolean insertAfter(E obj1, E obj2) throws IllegalArgumentException{ 
+		if(obj1 == null || obj2 == null) 
+			throw new IllegalArgumentException(); 
+		if(this.numElements > 0) { 
+			int posObj1 = this.search(obj1);//variavel para encontrar a posicao do objeto
+			if(posObj1 == -1) 
+				return false; 
+			this.insert(obj2, posObj1+1); 
+			return true; 
+		} 
+		return false; 
+	}
+	
 	/**
 	 * Retorna uma representa��o String da lista
 	 * @see java.lang.Object#toString()
@@ -107,9 +120,5 @@ public class StaticList <E> implements List<E> {
 			s += elements[i] + " ";//concatena tudo em uma string
 		return s;
 	}
-	
-	public boolean insertAfter(E obj1, E obj2) {
-		obj1.equals(obj1);
-		return false;
-	}
+
 }
